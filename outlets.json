@@ -1,0 +1,341 @@
+{
+  "updated": "April 2026",
+  "cities": [
+    {
+      "city": "Jakarta",
+      "outlets": [
+        {
+          "name": "C Store Muwardi",
+          "address": "Jl. Muwardi No.42, RT.10/RW.4, Grogol, Kec. Grogol petamburan, Kota Jakarta Barat, Daerah Khusus Ibukota Jakarta 11450",
+          "hours": "09:00 - 21:00",
+          "wa": "https://wa.me/6287722724816",
+          "grab": "https://r.grab.com/g/2-2-6-C7UYMF5FWFM3GJ",
+          "maps": "https://maps.app.goo.gl/ER1bq46dGGZTdEqZ6"
+        },
+        {
+          "name": "C Store Benhil",
+          "address": "Jl. Bendungan Hilir No.98, RT.12/RW.4, Bend. Hilir, Kecamatan Tanah Abang, Kota Jakarta Pusat, Daerah Khusus Ibukota Jakarta, 10210",
+          "hours": "09:00 - 21:00",
+          "wa": "",
+          "grab": "",
+          "maps": "https://maps.app.goo.gl/rHZzRTikB5SHfBXDA"
+        }
+      ]
+    },
+    {
+      "city": "Tangerang",
+      "outlets": [
+        {
+          "name": "C Store Pustek",
+          "address": "Jl. Raya Puspitek No.48, Buaran, Kec. Serpong, Kota Tangerang Selatan, Banten 15310",
+          "hours": "09:00 - 21:00",
+          "wa": "https://wa.me/6281913580778",
+          "grab": "https://r.grab.com/g/2-2-6-C7T1JB4BVPNXKE",
+          "maps": "https://maps.app.goo.gl/PGc77Hcwc1tfPXgX8"
+        },
+        {
+          "name": "C Store Fiorenza Cikupa",
+          "address": "Ruko Fiorenza, JL. Raya H. Cinde Lakoni No.17 / 52 Blok P, Ciakar, Kec. Cikupa, Kabupaten Tangerang, Banten 15710",
+          "hours": "09:00 - 21:00",
+          "wa": "https://wa.me/6281944210513",
+          "grab": "https://r.grab.com/g/2-2-6-C7T1JB32LFKGGA",
+          "maps": "https://maps.app.goo.gl/4k6Ke8hLkbxEJaKJA"
+        },
+        {
+          "name": "C Store Benda Pamulang",
+          "address": "Ruko Pamulang Permai No.F1 /27, RT.001/RW.015, Benda Baru, Kec. Pamulang, Kota Tangerang Selatan, Banten 15433",
+          "hours": "09:00 - 21:00",
+          "wa": "https://wa.me/6281944215238",
+          "grab": "https://r.grab.com/g/2-2-6-C7TAR8J1BCCZDA",
+          "maps": "https://maps.app.goo.gl/v7TbA6F1Xda3SAEG6"
+        },
+        {
+          "name": "C Store Milenial Pik 2",
+          "address": "Rukan Millenial Blok B-07, PIK 2, Tanjung Burung, Teluknaga, Tangerang Regency, Banten 15326",
+          "hours": "09:00 - 21:00",
+          "wa": "https://wa.me/6281944219566",
+          "grab": "https://r.grab.com/g/2-2-6-C7UCNFCGJTCZE2",
+          "maps": "https://maps.app.goo.gl/M7sPAxscgdmXaKkA8\\"
+        },
+        {
+          "name": "C Store Taman Asri",
+          "address": "Ruko Taman Asri, Jl. Taman Asri Utama Blok I No.2, RT.005/RW.012, Gaga, Kec. Larangan, Kota Tangerang, Banten 15154",
+          "hours": "09:00 - 21:00",
+          "wa": "https://wa.me/6287722724806",
+          "grab": "https://r.grab.com/g/2-2-6-C7T1WBKUHFMGJ2",
+          "maps": "https://maps.app.goo.gl/h4W5qt1xxaoff2di6"
+        },
+        {
+          "name": "C Store Taman Royal",
+          "address": "Ruko Taman Royal Ruko Permata Niaga 3 No.3 Tanah Tinggi, Kec Tangerang, Kota Tangerang, Banten 15119",
+          "hours": "09:00 - 21:00",
+          "wa": "https://wa.me/6287722724805",
+          "grab": "https://r.grab.com/g/2-2-6-C7T2DGCUNVAKGX",
+          "maps": "https://maps.app.goo.gl/G55mvXT7ue28tM8B8"
+        },
+        {
+          "name": "C Store Palem Semi",
+          "address": "Komplek Ruko Barcelona No.75 Jl Palem Raja Karawaci, Panunggangan Bar., Kec. Cibodas, Kota Tangerang, Banten 15139",
+          "hours": "09:00 - 21:00",
+          "wa": "https://wa.me/628175200134",
+          "grab": "https://r.grab.com/g/2-2-6-C7TKG8BZEBDDTJ",
+          "maps": "https://maps.app.goo.gl/LcEGd6ejFeMD3n7U8"
+        }
+      ]
+    },
+    {
+      "city": "Bogor",
+      "outlets": [
+        {
+          "name": "C Store Canadian Cibubur",
+          "address": "Kota Wisata Ruko Canadian Broadway, Jl. Raya Kota Wisata Blok CBE No.15 Blok CB, Limus Nunggal, Kec. Cileungsi, Kabupaten Bogor, Jawa Barat 16820",
+          "hours": "09:00 - 21:00",
+          "wa": "https://wa.me/6281944220051",
+          "grab": "https://r.grab.com/g/2-2-6-C7T2AXADCGLFRN",
+          "maps": "https://maps.app.goo.gl/nUubmw5e7fXGTgfNA"
+        },
+        {
+          "name": "C Store Permata Cibubur",
+          "address": "Ruko Permata Cibubur, Jl. Raya Permata Cibubur No. 6 Blok F.05, Cileungsi Kidul, Kec. Cileungsi, Kabupaten Bogor, Jawa Barat 16820",
+          "hours": "09:00 - 21:00",
+          "wa": "https://wa.me/6281944214740",
+          "grab": "https://r.grab.com/g/2-2-6-C7T1E7CGEKL3GN",
+          "maps": "https://maps.app.goo.gl/JNEUxD692oGLcMiM7"
+        }
+      ]
+    },
+    {
+      "city": "Bekasi",
+      "outlets": [
+        {
+          "name": "C Store Cbd Cibubur",
+          "address": "Ruko CBD Citra Grand Blok ER 2 No 6 Jati Rangga Kec Jatisampurna Kota Bekasi, Jawa Barat 17434",
+          "hours": "09:00 - 21:00",
+          "wa": "https://wa.me/628175200141",
+          "grab": "https://r.grab.com/g/2-2-6-C7T1JP5YEBUXA6",
+          "maps": "https://maps.app.goo.gl/MKMTX6h5EwD4VYh19"
+        }
+      ]
+    },
+    {
+      "city": "Karawang",
+      "outlets": [
+        {
+          "name": "C Store Taruma",
+          "address": "Ruko Grand Taruma, Jl. Darmawangsa III No.10 D/9 - D/10, Sukamakmur, Teluk Jambe Timur, Karawang, Jawa Barat 41361",
+          "hours": "09:00 - 21:00",
+          "wa": "https://wa.me/6287722724809",
+          "grab": "https://r.grab.com/g/2-2-6-C7UBLCNYTJA2RJ",
+          "maps": "https://maps.app.goo.gl/aScJsXL1SAERoPKk9"
+        }
+      ]
+    },
+    {
+      "city": "Bandung",
+      "outlets": [
+        {
+          "name": "C Store Astana",
+          "address": "Jl. Astana Anyar Kel No.68, RT.11/RW.12, Cibadak, Kec. Astanaanyar, Kota Bandung, Jawa Barat 40241",
+          "hours": "09:00 - 21:00",
+          "wa": "https://wa.me/6287722724795",
+          "grab": "https://r.grab.com/g/2-2-6-C7T1FGCHWBBKLA",
+          "maps": "https://maps.app.goo.gl/FFBrJtvAnQ4K6vKq6"
+        },
+        {
+          "name": "C Store Duyut",
+          "address": "Jl. Cibaduyut No.70, Cibaduyut, Kec. Bojongloa Kidul, Kota Bandung, Jawa Barat 40236",
+          "hours": "09:00 - 21:00",
+          "wa": "https://wa.me/6287722724798",
+          "grab": "https://r.grab.com/g/2-2-6-C7T1GZCKL6U2NE",
+          "maps": "https://maps.app.goo.gl/KhcfbUjg9PyMHzzX6"
+        },
+        {
+          "name": "C Store Ibc",
+          "address": "Plaza IBCC, Jl. A. Yani Blok D3 No.11, Kacapiring, Kec. Batununggal, Kota Bandung, Jawa Barat 40114",
+          "hours": "09:00 - 21:00",
+          "wa": "https://wa.me/6285966715453",
+          "grab": "https://r.grab.com/g/2-2-6-C7T1GZCKLYNFET",
+          "maps": "https://maps.app.goo.gl/agPXDAcScuzK2GrW9"
+        },
+        {
+          "name": "C Store Jurang Pasteur",
+          "address": "Jl. Jurang No.51B, Pasteur, Kec. Sukajadi, Kota Bandung, Jawa Barat 40161",
+          "hours": "09:00 - 21:00",
+          "wa": "https://wa.me/6285966715459",
+          "grab": "https://r.grab.com/g/2-2-6-C7T1FGCGGN53EE",
+          "maps": "https://maps.app.goo.gl/j3es9mHbhJxcZP636"
+        },
+        {
+          "name": "C Store Veteran",
+          "address": "Jl. Veteran No.40, Kb. Pisang, Kec. Sumur Bandung, Kota Bandung, Jawa Barat 40112",
+          "hours": "09:00 - 21:00",
+          "wa": "https://wa.me/6287722724796",
+          "grab": "https://r.grab.com/g/2-2-6-C7T1EX4ALT5GNE",
+          "maps": "https://maps.app.goo.gl/aKefZX2Sm6Zg5HcJ8"
+        },
+        {
+          "name": "C Store Pelajar Pejuang 45",
+          "address": "Jl. Pelajar Pejuang 45 No.102, Turangga, Kec. Lengkong Bandung, Jawa Barat, 40263",
+          "hours": "09:00 - 21:00",
+          "wa": "https://wa.me/6281944219563",
+          "grab": "https://r.grab.com/g/2-2-6-C7T1GPC3DCMBEX",
+          "maps": "https://maps.app.goo.gl/71STHS7kXfCkR2Fn9"
+        },
+        {
+          "name": "C Store Pluto",
+          "address": "Jl. Pluto Raya No.35 E, RT.04/RW.13, Margasari, Kec. Buahbatu Bandung, Jawa Barat, 40286",
+          "hours": "09:00 - 21:00",
+          "wa": "https://wa.me/6281944219564",
+          "grab": "https://r.grab.com/g/2-2-6-C7T1GPCZTFNBJN",
+          "maps": "https://maps.app.goo.gl/rchmnSvAKfnzHeG49"
+        },
+        {
+          "name": "C Store Cijagra",
+          "address": "JL Cijagra 1 No.63 RT 006 RW 003 Cijagra Lengkong Kota Bandung, Jawa Barat, 40265",
+          "hours": "09:00 - 21:00",
+          "wa": "https://wa.me/6287722724813",
+          "grab": "https://r.grab.com/g/2-2-6-C7T1GZCKL6T2RT",
+          "maps": "https://maps.app.goo.gl/ZFxnAVf65zxFj2Vh9"
+        },
+        {
+          "name": "C Store Harmony",
+          "address": "Ruko Harmony Park No.4 Jl Ciwanstra No.86 Margahayu Endah Rancasari Kota Bandung Jawa Barat, 40292",
+          "hours": "09:00 - 21:00",
+          "wa": "https://wa.me/6287722724824",
+          "grab": "https://r.grab.com/g/2-2-6-C7T1HFDTVJD1JX",
+          "maps": "https://maps.app.goo.gl/mS2iE8GtMrvGyRe28"
+        },
+        {
+          "name": "C Store Kopo Permai 3",
+          "address": "Ruko Kopo Permai, Jl. Kopo Permai III No.F8/7, Cangkuang Kulon, Kec. Dayeuhkolot, Kabupaten Bandung, Jawa Barat 40227",
+          "hours": "09:00 - 21:00",
+          "wa": "https://wa.me/6287722724827",
+          "grab": "https://r.grab.com/g/2-2-6-C7T1JX6XVUC3VN",
+          "maps": "https://maps.app.goo.gl/Sc3JcjJHtwN5JoBw9"
+        },
+        {
+          "name": "C Store Tki 3",
+          "address": "Jl. Taman Kopo Indah 3 No.F-12A, Mekar Rahayu, Kec.Margaasih Kabupaten Bandung, Jawa Barat, 40218",
+          "hours": "09:00 - 21:00",
+          "wa": "https://wa.me/6281949873164",
+          "grab": "https://r.grab.com/g/2-2-6-C7T1GPC2T7XVR2",
+          "maps": "https://maps.app.goo.gl/HTc1hu3s2adAU7mX7"
+        },
+        {
+          "name": "C Store Istana Sudirman",
+          "address": "Ruko Istana Sudirman Residen, Jl. Raya Cijerah No.11A, Cibuntu, Kec. Bandung Kulon 40212",
+          "hours": "09:00 - 21:00",
+          "wa": "https://wa.me/6287700293365",
+          "grab": "https://r.grab.com/g/2-2-6-C7T1G6DHCNCFG2",
+          "maps": "https://maps.app.goo.gl/WiLPY4Eq6GpoW6Vk8"
+        },
+        {
+          "name": "C Store Cijambe",
+          "address": "Ruko Komplek Pasir Jati Cijambe, Jl. Cijambe No.49A, Pasir Endah, Kec. Ujung Berung, Kota Bandung, Jawa Barat 40619",
+          "hours": "09:00 - 21:00",
+          "wa": "https://wa.me/6287700293366",
+          "grab": "https://r.grab.com/g/2-2-6-C7T1JX6XVJAYEA",
+          "maps": "https://maps.app.goo.gl/3weQkiLxf5S6YB9HA"
+        }
+      ]
+    },
+    {
+      "city": "Semarang",
+      "outlets": [
+        {
+          "name": "C Store Anggrek",
+          "address": "Jl. Anggrek Raya No. 4 (Belakang Gajah Mada-Mall Citraland, Samping Anggrek Residence), Pekunden, Kec. Semarang Tengah, Kota Semarang, Jawa Tengah 50123",
+          "hours": "09:00 - 21:00",
+          "wa": "https://wa.me/6287722724834",
+          "grab": "https://r.grab.com/g/2-2-6-C7T1WBKURP6TTJ",
+          "maps": "https://maps.app.goo.gl/v3AtV4K9rc1AFKg88"
+        },
+        {
+          "name": "C Store Bonjol",
+          "address": "Jl. Imam Bonjol No.180H, Pendrikan Kidul, Kec. Semarang Tengah, Kota Semarang, Jawa Tengah 50131",
+          "hours": "09:00 - 21:00",
+          "wa": "https://wa.me/6287722724838",
+          "grab": "https://r.grab.com/g/2-2-6-C7T2AXAKJTWWTT",
+          "maps": "https://maps.app.goo.gl/kbVVto9JGmv8CV777"
+        },
+        {
+          "name": "C Store Kedungmundu",
+          "address": "Jl. Fatmawati No.3, Kedungmundu, Kec. Tembalang, Kota Semarang, Jawa Tengah 50246",
+          "hours": "09:00 - 21:00",
+          "wa": "https://wa.me/6287722724833",
+          "grab": "https://r.grab.com/g/2-2-6-C7THRZJKVE4HC2",
+          "maps": "https://maps.app.goo.gl/HeZmXdQbsgraGjSH6"
+        },
+        {
+          "name": "C Store Kelud",
+          "address": "Jl. Kelud Raya 15 B , Petompon, Kec. Gajahmungkur, Kota Semarang, Jawa Tengah 50237",
+          "hours": "09:00 - 21:00",
+          "wa": "https://wa.me/6287854020222",
+          "grab": "https://r.grab.com/g/2-2-6-C7T2AGNXR7E3TX",
+          "maps": "https://maps.app.goo.gl/TbR96fWmoXigr6H48"
+        },
+        {
+          "name": "C Store Lamper",
+          "address": "Jl. Lamper Tengah No.168 A-B, Pandean Lamper, Kec. Gayamsari, Kota Semarang, Jawa Tengah 50248",
+          "hours": "09:00 - 21:00",
+          "wa": "https://wa.me/6287722724832",
+          "grab": "https://r.grab.com/g/2-2-6-C7T1JX6XVBU1HA",
+          "maps": "https://maps.app.goo.gl/UwHvpWuwEfaj1pub9"
+        },
+        {
+          "name": "C Store Plamongan",
+          "address": "Jl. Brigjen Sudiarto No. 158, Plamongan Sari, Kec. Pedurungan, Kota Semarang, Jawa Tengah 50192",
+          "hours": "09:00 - 21:00",
+          "wa": "https://wa.me/6287722724837",
+          "grab": "https://r.grab.com/g/2-2-6-C7T1WBLDCBWJRN",
+          "maps": "https://maps.app.goo.gl/hPGAxWw9BxX4deNu6"
+        },
+        {
+          "name": "C Store Tlogosari",
+          "address": "Jl. Soekarno Hatta No. 101, Tlogosari Kulon, Kec. Pedurungan, Kota Semarang, Jawa Tengah 50196",
+          "hours": "09:00 - 21:00",
+          "wa": "https://wa.me/6287722724829",
+          "grab": "https://r.grab.com/g/2-2-6-C7T1JP5XE3LBRX",
+          "maps": "https://maps.app.goo.gl/tCGDYnHufw93yS3M8"
+        }
+      ]
+    },
+    {
+      "city": "Surabaya",
+      "outlets": [
+        {
+          "name": "C Store Northwest",
+          "address": "Ruko Northwest Citraland, Northwest Boulevard NV2 No.53, Babat Jerawat, Kec. Pakal Kota Surabaya, Jawa Timur, 60196",
+          "hours": "09:00 - 21:00",
+          "wa": "https://wa.me/628175200139",
+          "grab": "https://r.grab.com/g/2-2-6-C7T2CTAVJ6AHVT",
+          "maps": "https://maps.app.goo.gl/fg6K2erhzMhvSpVBA"
+        },
+        {
+          "name": "C Store Sukolilo",
+          "address": "Eastern Park AB, Jl. Raya Sukolilo Mulia No.A15, Keputih, Kec. Sukolilo Kota Surabaya, Jawa Timur, 60111",
+          "hours": "09:00 - 21:00",
+          "wa": "https://wa.me/628175200137",
+          "grab": "https://r.grab.com/g/2-2-6-C7T1WBKGLAXUNJ",
+          "maps": "https://maps.app.goo.gl/afuqFY3L2G1ow8JRA"
+        },
+        {
+          "name": "C Store Bukitmas",
+          "address": "Ruko Wisata Bukitmas 2, Jalan Wisata Bukit Mas Blok RH No.2, Lidah Wetan, Kec. Lakarsantri Kota Surabaya, Jawa Timur, 60213",
+          "hours": "09:00 - 21:00",
+          "wa": "https://wa.me/628175200140",
+          "grab": "https://r.grab.com/g/2-2-6-C7UCLYC1HEKTNN",
+          "maps": "https://maps.app.goo.gl/8kavY5TdMcMnb3888"
+        },
+        {
+          "name": "C Store Ketintang",
+          "address": "Ruko OP, Jl Ketintang Baru No 50 E RT 12 RW 03 Kel. Ketintang , Kec. Gayungan Kota Surabaya, Jawa Timur, 60231",
+          "hours": "09:00 - 21:00",
+          "wa": "https://wa.me/628175200136",
+          "grab": "https://r.grab.com/g/2-2-6-C7T1WBKERGKJRE",
+          "maps": "https://maps.app.goo.gl/Z7egzeXwwyz8w3jXA"
+        }
+      ]
+    }
+  ]
+}
