@@ -1,0 +1,71 @@
+{
+  "month": "Mei 2026",
+  "banners": [
+    "https://res.cloudinary.com/dpjw4tqqn/image/upload/v1777525496/oke_untuk_ini_saya_mau_202604301202_cjwpm9.jpg",
+    "https://res.cloudinary.com/dpjw4tqqn/image/upload/v1777531837/buat_ukurannya_jadi_16_9_jangan_202604301333_gcdliw.jpg",
+    "https://res.cloudinary.com/dpjw4tqqn/image/upload/v1777531840/buat_ukurannya_jadi_16_9_jangan_202604301328_uq8amv.jpg",
+    "https://res.cloudinary.com/dpjw4tqqn/image/upload/v1777531840/buat_ukurannya_jadi_16_9_jangan_202604301338_xlywvu.jpg",
+    "https://res.cloudinary.com/dpjw4tqqn/image/upload/v1777531845/buat_ukurannya_jadi_16_9_jangan_202604301346_curf99.jpg",
+    "https://res.cloudinary.com/dpjw4tqqn/image/upload/v1777531848/buat_ukurannya_jadi_16_9_jangan_202604301340_gjhyqn.jpg",
+    "https://res.cloudinary.com/dpjw4tqqn/image/upload/v1777531848/buat_ukurannya_jadi_16_9_jangan_202604301342_jdo2jc.jpg",
+    "https://res.cloudinary.com/dpjw4tqqn/image/upload/v1777531861/buat_ukurannya_jadi_16_9_jangan_202604301337_esscnt.jpg",
+    "https://res.cloudinary.com/dpjw4tqqn/image/upload/v1777531861/buat_ukurannya_jadi_16_9_jangan_202604301347_xnmvcr.jpg",
+    "https://res.cloudinary.com/dpjw4tqqn/image/upload/v1777531861/buat_ukurannya_jadi_16_9_jangan_202604301336_s6eeif.jpg",
+    "https://res.cloudinary.com/dpjw4tqqn/image/upload/v1777531867/buat_ukurannya_jadi_16_9_jangan_202604301349_ydxxm0.jpg",
+    "https://res.cloudinary.com/dpjw4tqqn/image/upload/v1777531869/buat_ukurannya_jadi_16_9_jangan_202604301331_wcp7uv.jpg"
+  ],
+  "tabs": [
+    {
+      "id": "mayday",
+      "name": "MAYDAY",
+      "products": [
+        {"name": "XROS 5 Mini Bundle Kit", "price_original": 190000, "price_promo": 170000, "category": "POD"},
+        {"name": "Oxva Xlim Pro", "price_original": 280000, "price_promo": 240000, "category": "POD"},
+        {"name": "Salt Nic Premium 30ml", "price_original": 105000, "price_promo": 89000, "category": "LIQUID"},
+        {"name": "Coil Pack 5pcs", "price_original": 65000, "price_promo": 45000, "category": "COIL"},
+        {"name": "Starter Kit Bundle", "price_original": 500000, "price_promo": 450000, "category": "KIT"}
+      ]
+    },
+    {
+      "id": "liquidday",
+      "name": "LIQUID DAY",
+      "products": [
+        {"name": "Kamikaze Iced 60ml", "price_original": 120000, "price_promo": 95000, "category": "LIQUID"},
+        {"name": "Doozy Nicsalt 30ml", "price_original": 95000, "price_promo": 79000, "category": "LIQUID"},
+        {"name": "FreeBase Premium 60ml", "price_original": 110000, "price_promo": 89000, "category": "LIQUID"},
+        {"name": "Salt Nic Bundle 2x30ml", "price_original": 190000, "price_promo": 149000, "category": "LIQUID"},
+        {"name": "Liquid Disposable Pack", "price_original": 85000, "price_promo": 69000, "category": "LIQUID"}
+      ]
+    },
+    {
+      "id": "oneprice",
+      "name": "ONE PRICE",
+      "products": [
+        {"name": "All Liquid 30ml", "price_original": 95000, "price_promo": 79000, "category": "LIQUID"},
+        {"name": "All Coil Standard", "price_original": 50000, "price_promo": 39000, "category": "COIL"},
+        {"name": "Pod Cartridge 2pcs", "price_original": 75000, "price_promo": 59000, "category": "POD"},
+        {"name": "All Disposable", "price_original": 85000, "price_promo": 69000, "category": "DISPOSABLE"},
+        {"name": "Cotton Pack Premium", "price_original": 45000, "price_promo": 35000, "category": "AKSESORIS"}
+      ]
+    },
+    {
+      "id": "oxvabooster",
+      "name": "OXVA BOOSTER",
+      "products": [
+        {"name": "OXVA Xlim V3", "price_original": 320000, "price_promo": 275000, "category": "POD"},
+        {"name": "OXVA Xlim Pro Bundle", "price_original": 380000, "price_promo": 320000, "category": "POD"},
+        {"name": "OXVA Coil Pack", "price_original": 70000, "price_promo": 55000, "category": "COIL"},
+        {"name": "OXVA Pod Cartridge", "price_original": 80000, "price_promo": 65000, "category": "AKSESORIS"}
+      ]
+    },
+    {
+      "id": "djoyfestival",
+      "name": "DJOY FESTIVAL",
+      "products": [
+        {"name": "Djoy Beam Bundle", "price_original": 150000, "price_promo": 119000, "category": "DISPOSABLE"},
+        {"name": "Djoy 79 Series", "price_original": 85000, "price_promo": 69000, "category": "DISPOSABLE"},
+        {"name": "Djoy Fest Edition", "price_original": 95000, "price_promo": 79000, "category": "DISPOSABLE"}
+      ]
+    }
+  ]
+}
