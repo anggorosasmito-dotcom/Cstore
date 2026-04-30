@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="description" content="C Store — Premium Vape Store. 37 outlet di 8 kota. Order via GrabMart & WhatsApp.">
+<title>C Store — Premium Vape Store</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@300;400;500;600&family=Bebas+Neue&display=swap" rel="stylesheet">
+<style>
+/* ══ RESET & VARS ══ */
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+:root{
+  --black:#121212;--soft-black:#1A1A1A;--espresso:#2B1E1A;
+  --cream:#F5EDE0;--beige:#E6D3B3;--caramel:#C89B6D;
+  --brown:#A67C52;--gold:#BFA27A;--wa:#25D366;
+  --serif:'Cormorant Garamond',Georgia,serif;
+  --sans:'DM Sans',sans-serif;
+  --display:'Bebas Neue',sans-serif;
+}
+html{scroll-behavior:smooth;font-size:16px}
+body{background:var(--black);color:var(--beige);font-family:var(--sans);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+
+/* ══ AGE GATE ══ */
+#age-gate{position:fixed;inset:0;z-index:9999;display:flex;align-items:center;justify-content:center;padding:1.5rem}
+.ag-bg{position:absolute;inset:0;background-image:url('https://res.cloudinary.com/dpjw4tqqn/image/upload/v1777522721/Cheer_Up_the_Mood_With_Something_fujyla_lwcm06.png');background-size:cover;background-position:center top;filter:blur(8px) brightness(0.4);transform:scale(1.08)}
+.ag-overlay{position:absolute;inset:0;background:linear-gradient(160deg,rgba(18,12,10,0.65),rgba(43,30,26,0.55))}
+.ag-particles{position:absolute;inset:0;overflow:hidden;pointer-events:none}
+.ag-p{position:absolute;bottom:-20px;border-radius:50%;background:rgba(191,162,122,0.1);animation:agFloat linear infinite}
+@keyframes agFloat{0%{transform:translateY(0) scale(0.8);opacity:0}10%{opacity:0.7}90%{opacity:0.1}100%{transform:translateY(-110vh) scale(3);opacity:0}}
+.ag-card{position:relative;z-index:2;width:100%;max-width:360px;background:rgba(22,14,11,0.6);backdrop-filter:blur(28px) saturate(1.5);-webkit-backdrop-filter:blur(28px) saturate(1.5);border:1px solid rgba(191,162,122,0.2);border-radius:20px;padding:2.5rem 2rem 2rem;box-shadow:0 8px 48px rgba(0,0,0,0.55),0 1px 0 rgba(191,162,122,0.1) inset;opacity:0;transform:translateY(28px) scale(0.97);animation:agCardIn 0.7s cubic-bezier(0.22,1,0.36,1) 0.2s forwards}
+@keyframes agCardIn{to{opacity:1;transform:translateY(0) scale(1)}}
+.ag-logo-wrap{text-align:center;margin-bottom:1.5rem}
+.ag-logo{height:52px;width:auto;object-fit:contain;filter:drop-shadow(0 2px 16px rgba(191,162,122,0.35))}
+.ag-logo-fallback{display:none;font-family:var(--display);font-size:2rem;color:var(--gold);letter-spacing:4px}
+.ag-divider{display:flex;align-items:center;gap:0.75rem;margin-bottom:1.75rem}
+.ag-divider-line{flex:1;height:1px;background:linear-gradient(to right,transparent,rgba(191,162,122,0.3),transparent)}
+.ag-divider-dot{width:4px;height:4px;border-radius:50%;background:var(--gold);opacity:0.5}
+.ag-eyebrow{font-size:0.58rem;letter-spacing:4px;color:var(--gold);text-transform:uppercase;text-align:center;margin-bottom:0.5rem;font-weight:500}
+.ag-title{font-family:var(--serif);font-size:1.6rem;font-weight:500;color:var(--cream);text-align:center;line-height:1.1;margin-bottom:0.4rem}
+.ag-title em{font-style:italic;color:var(--gold)}
+.ag-sub{font-size:0.72rem;color:rgba(230,211,179,0.5);text-align:center;margin-bottom:1.75rem;font-weight:300;line-height:1.5}
+.ag-input-label{font-size:0.58rem;letter-spacing:3px;color:var(--brown);text-transform:uppercase;text-align:center;margin-bottom:0.75rem;font-weight:500}
+.ag-inputs{display:flex;gap:0.5rem;align-items:center;margin-bottom:0.5rem}
+.ag-iw{flex:1;display:flex;flex-direction:column;align-items:center;gap:0.3rem}
+.ag-iw.year{flex:1.5}
+.ag-input{width:100%;background:rgba(255,255,255,0.05);border:1px solid rgba(191,162,122,0.18);border-radius:10px;padding:0.75rem 0.4rem;font-family:var(--display);font-size:1.5rem;letter-spacing:2px;color:var(--cream);text-align:center;outline:none;transition:all 0.2s;-webkit-appearance:none;caret-color:var(--gold)}
+.ag-input::placeholder{color:rgba(191,162,122,0.2);font-size:1.3rem}
+.ag-input:focus{border-color:rgba(191,162,122,0.5);background:rgba(191,162,122,0.06);box-shadow:0 0 0 3px rgba(191,162,122,0.07)}
+.ag-input.error{border-color:rgba(220,80,80,0.5);animation:agShake 0.4s ease}
+@keyframes agShake{0%,100%{transform:translateX(0)}25%{transform:translateX(-5px)}75%{transform:translateX(5px)}}
+.ag-hint{font-size:0.53rem;letter-spacing:1.5px;color:rgba(166,124,82,0.5);text-transform:uppercase}
+.ag-sep{font-family:var(--display);font-size:1.5rem;color:rgba(191,162,122,0.25);padding-bottom:0.75rem}
+.ag-err{font-size:0.68rem;color:rgba(220,100,100,0.8);text-align:center;min-height:1rem;margin-bottom:0.4rem;transition:opacity 0.2s}
+.ag-btn-yes{width:100%;background:linear-gradient(135deg,var(--gold),var(--caramel));color:var(--black);border:none;padding:1rem;font-family:var(--display);font-size:1rem;letter-spacing:3px;border-radius:10px;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:0.6rem;transition:all 0.2s;margin-bottom:0.6rem;position:relative;overflow:hidden}
+.ag-btn-yes::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,rgba(255,255,255,0.1),transparent);pointer-events:none}
+.ag-btn-yes:hover{transform:translateY(-1px);box-shadow:0 6px 24px rgba(191,162,122,0.2)}
+.ag-btn-yes:active{transform:scale(0.98)}
+.ag-btn-no{width:100%;background:transparent;color:rgba(166,124,82,0.55);border:none;padding:0.5rem;font-size:0.7rem;cursor:pointer;transition:color 0.2s;font-family:var(--sans);letter-spacing:0.5px}
+.ag-btn-no:hover{color:var(--brown)}
+.ag-disclaimer{margin-top:1.25rem;padding-top:1.25rem;border-top:1px solid rgba(191,162,122,0.1);font-size:0.57rem;color:rgba(166,124,82,0.35);line-height:1.7;text-align:center}
+
+/* ══ MAIN ══ */
+#main{display:none}
+
+/* ══ NAV ══ */
+nav{position:sticky;top:0;z-index:100;padding:0.875rem 1.5rem;display:flex;align-items:center;justify-content:space-between;background:rgba(18,18,18,0.9);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid rgba(43,30,26,0.5)}
+.nav-logo-img{height:32px;width:auto;object-fit:contain;cursor:pointer}
+.nav-logo-fallback{display:none;font-family:var(--display);font-size:1.5rem;color:var(--gold);letter-spacing:3px;cursor:pointer}
+.nav-ig{width:34px;height:34px;border:1px solid rgba(166,124,82,0.25);border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all 0.2s}
+.nav-ig:hover{border-color:var(--gold);background:rgba(191,162,122,0.08)}
+.nav-ig svg{width:14px;height:14px;fill:var(--beige)}
+
+/* ══ HERO ══ */
+#hero{position:relative;min-height:100svh;display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden}
+.hero-slide-bg{position:absolute;inset:0;z-index:0}
+.hero-track{display:flex;width:100%;height:100%;transition:transform 0.7s cubic-bezier(0.25,0.46,0.45,0.94);will-change:transform}
+.hero-slide{position:relative;min-width:100%;height:100%;flex-shrink:0;overflow:hidden;background:var(--espresso)}
+.hero-slide img{width:100%;height:100%;object-fit:cover;object-position:center;display:block;pointer-events:none;transition:transform 8s ease;transform:scale(1.05)}
+.hero-slide.active img{transform:scale(1.0)}
+.hero-slide::before{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,rgba(18,12,10,0.2) 0%,rgba(18,12,10,0.1) 25%,rgba(18,12,10,0.5) 60%,rgba(18,12,10,0.92) 100%);z-index:1}
+.hero-slide::after{content:'';position:absolute;inset:0;opacity:0.03;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");background-size:200px;z-index:1;pointer-events:none}
+.hero-progress{position:absolute;top:0;left:0;height:2px;width:0%;background:linear-gradient(to right,var(--gold),var(--caramel));z-index:10;pointer-events:none}
+.hero-progress.run{transition:width 5s linear;width:100%}
+.hero-counter{position:absolute;top:4.5rem;right:1.25rem;z-index:10;font-family:var(--display);font-size:0.82rem;letter-spacing:1.5px;color:rgba(230,211,179,0.5);background:rgba(18,12,10,0.45);backdrop-filter:blur(8px);padding:0.2rem 0.6rem;border-radius:99px;border:1px solid rgba(191,162,122,0.12)}
+.hero-content{position:relative;z-index:5;padding:2rem 1.5rem 0}
+.hero-eyebrow{font-size:0.58rem;letter-spacing:5px;color:var(--gold);text-transform:uppercase;display:flex;align-items:center;gap:0.5rem;margin-bottom:0.875rem;opacity:0;animation:fadeUp 0.7s ease 0.3s forwards}
+.e-line{flex:0 0 20px;height:1px;background:currentColor}
+.hero-title{font-family:var(--serif);font-size:clamp(2.3rem,8.5vw,3.2rem);font-weight:500;line-height:1.05;color:var(--cream);letter-spacing:-0.5px;margin-bottom:1rem;opacity:0;animation:fadeUp 0.8s ease 0.5s forwards}
+.hero-title em{font-style:italic;color:var(--gold)}
+.hero-desc{font-size:0.82rem;color:rgba(245,237,224,0.62);line-height:1.75;font-weight:300;max-width:300px;margin-bottom:1.5rem;opacity:0;animation:fadeUp 0.7s ease 0.7s forwards}
+.hero-ctas{display:flex;flex-direction:column;gap:0.55rem;margin-bottom:1.5rem;opacity:0;animation:fadeUp 0.7s ease 0.9s forwards}
+.cta-grab{background:var(--gold);color:var(--black);padding:1rem 1.5rem;font-family:var(--display);font-size:1rem;letter-spacing:3px;border:none;cursor:pointer;display:flex;align-items:center;gap:0.75rem;width:100%;border-radius:3px;transition:all 0.2s}
+.cta-grab:hover{background:var(--caramel)}
+.cta-grab:active{transform:scale(0.98)}
+.cta-wa{background:rgba(245,237,224,0.07);backdrop-filter:blur(10px);color:var(--cream);padding:1rem 1.5rem;font-family:var(--display);font-size:1rem;letter-spacing:3px;border:1px solid rgba(245,237,224,0.18);cursor:pointer;display:flex;align-items:center;gap:0.75rem;width:100%;border-radius:3px;transition:all 0.2s}
+.cta-wa:hover{border-color:var(--gold);color:var(--gold)}
+.cta-wa:active{transform:scale(0.98)}
+.cta-grab svg,.cta-wa svg{width:18px;height:18px;flex-shrink:0}
+.hero-bottom{position:relative;z-index:5;padding:0 1.5rem 2rem}
+.hero-stats-row{display:flex;align-items:center;justify-content:space-between;padding-top:1.25rem;border-top:1px solid rgba(245,237,224,0.1);opacity:0;animation:fadeUp 0.7s ease 1.1s forwards}
+.hero-stats{display:flex;flex:1}
+.hstat{flex:1;border-right:1px solid rgba(245,237,224,0.1)}
+.hstat:not(:first-child){padding-left:1rem}
+.hstat:not(:last-child){padding-right:1rem}
+.hstat:last-child{border-right:none}
+.hstat-num{font-family:var(--display);font-size:2rem;color:var(--gold);line-height:1;cursor:pointer;transition:color 0.2s}
+.hstat-num:hover{color:var(--caramel)}
+.hstat-label{font-size:0.53rem;letter-spacing:2px;color:rgba(230,211,179,0.45);text-transform:uppercase;margin-top:0.2rem}
+.hero-dots{display:flex;flex-direction:column;align-items:flex-end;gap:0.3rem;padding-left:1rem}
+.hero-dots-row{display:flex;gap:0.3rem;flex-wrap:wrap;justify-content:flex-end;max-width:80px}
+.hdot{width:5px;height:5px;border-radius:99px;background:rgba(191,162,122,0.2);cursor:pointer;transition:all 0.3s ease;flex-shrink:0}
+.hdot.active{width:18px;background:var(--gold)}
+.hero-dots-label{font-size:0.5rem;letter-spacing:1.5px;color:rgba(166,124,82,0.35);text-transform:uppercase;white-space:nowrap}
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+@supports (padding-bottom: env(safe-area-inset-bottom)){.hero-bottom{padding-bottom:calc(2rem + env(safe-area-inset-bottom))}}
+
+/* ══ SECTION BASE ══ */
+.section{padding:4rem 1.5rem}
+.section-dark{background:var(--soft-black)}
+.section-cream{background:var(--cream);color:var(--espresso)}
+.section-cream .s-eyebrow{color:var(--brown)}
+.section-cream .s-title{color:var(--espresso)}
+.section-cream .s-divider{background:linear-gradient(to right,var(--brown),transparent)}
+.s-eyebrow{font-size:0.58rem;letter-spacing:5px;color:var(--gold);text-transform:uppercase;display:flex;align-items:center;gap:0.5rem;margin-bottom:0.7rem}
+.s-title{font-family:var(--serif);font-size:clamp(2rem,7.5vw,2.8rem);font-weight:500;line-height:1.05;color:var(--cream);margin-bottom:1.1rem;letter-spacing:-0.3px}
+.s-title em{font-style:italic;color:var(--gold)}
+.s-divider{width:32px;height:2px;background:linear-gradient(to right,var(--gold),transparent);margin-bottom:1.75rem}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity 0.65s ease,transform 0.65s ease}
+.reveal.in{opacity:1;transform:none}
+
+/* ══ PROMO SECTION ══ */
+#promo{background:var(--soft-black)}
+.promo-tabs{display:flex;gap:0.4rem;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;margin-bottom:1.5rem}
+.promo-tabs::-webkit-scrollbar{display:none}
+.ptab{padding:0.55rem 1.1rem;font-size:0.62rem;letter-spacing:2px;background:transparent;color:var(--brown);border:1px solid var(--espresso);cursor:pointer;white-space:nowrap;font-family:var(--sans);font-weight:500;text-transform:uppercase;transition:all 0.2s;border-radius:2px}
+.ptab.active{background:var(--gold);color:var(--black);border-color:var(--gold)}
+.ptab:hover:not(.active){border-color:var(--brown);color:var(--beige)}
+.promo-panel{display:none}
+.promo-panel.active{display:grid;grid-template-columns:1fr 1fr;gap:0.65rem}
+.promo-empty{display:none;padding:2.5rem 1.5rem;text-align:center;font-family:var(--serif);font-style:italic;font-size:1rem;color:var(--brown);border:1px dashed var(--espresso);grid-column:1/-1;line-height:1.6}
+.promo-panel.active .promo-empty{display:block}
+.promo-card{background:var(--espresso);overflow:hidden;border:1px solid transparent;transition:all 0.25s;cursor:pointer}
+.promo-card:hover{border-color:rgba(191,162,122,0.25);transform:translateY(-2px)}
+.promo-thumb{height:110px;background:linear-gradient(135deg,var(--black),var(--espresso));display:flex;align-items:center;justify-content:center;position:relative}
+.promo-thumb-label{font-family:var(--display);font-size:1.8rem;color:rgba(191,162,122,0.15);letter-spacing:4px}
+.promo-badge{position:absolute;top:0.5rem;right:0.5rem;background:var(--gold);color:var(--black);font-family:var(--display);font-size:0.85rem;letter-spacing:1px;padding:0.15rem 0.5rem}
+.promo-body{padding:0.75rem 0.875rem 0.875rem}
+.promo-name{font-size:0.75rem;font-weight:500;color:var(--beige);margin-bottom:0.3rem;line-height:1.3}
+.promo-price{font-family:var(--display);font-size:1.15rem;color:var(--gold);letter-spacing:1px}
+.promo-price .old{font-size:0.65rem;color:var(--brown);text-decoration:line-through;margin-left:0.4rem;letter-spacing:0}
+.promo-wa-cta{margin-top:1.5rem;display:flex;align-items:center;justify-content:center;gap:0.5rem;font-size:0.65rem;letter-spacing:2px;color:var(--brown);text-transform:uppercase;cursor:pointer;transition:color 0.2s}
+.promo-wa-cta:hover{color:var(--gold)}
+.promo-wa-cta svg{width:14px;height:14px}
+
+/* ══ OUTLET SECTION ══ */
+#outlets{background:var(--black)}
+.city-tabs{display:flex;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;border-bottom:1px solid var(--espresso);margin-bottom:1.5rem}
+.city-tabs::-webkit-scrollbar{display:none}
+.ctab{padding:0.7rem 1rem;font-size:0.65rem;letter-spacing:1.5px;font-weight:500;color:var(--brown);background:transparent;border:none;border-bottom:2px solid transparent;margin-bottom:-1px;cursor:pointer;white-space:nowrap;font-family:var(--sans);transition:all 0.2s;text-transform:uppercase}
+.ctab.active{color:var(--gold);border-bottom-color:var(--gold)}
+.ctab:hover:not(.active){color:var(--beige)}
+.city-panel{display:none}
+.city-panel.active{display:block}
+.cp-meta{font-family:var(--serif);font-style:italic;font-size:0.9rem;color:var(--brown);margin-bottom:1rem}
+.cp-meta strong{font-style:normal;font-family:var(--display);font-size:1rem;letter-spacing:1px;color:var(--gold)}
+.outlet-list{display:flex;flex-direction:column;gap:0.6rem}
+.outlet-card{background:var(--soft-black);border:1px solid var(--espresso);padding:1rem 1.1rem;transition:border 0.2s}
+.outlet-card:hover{border-color:rgba(191,162,122,0.25)}
+.outlet-top{display:flex;align-items:flex-start;justify-content:space-between;gap:0.75rem;margin-bottom:0.5rem}
+.outlet-name{font-family:var(--serif);font-size:1rem;font-weight:600;color:var(--cream);line-height:1.2}
+.outlet-actions{display:flex;gap:0.4rem;flex-shrink:0}
+.outlet-btn{width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all 0.2s;border:1px solid transparent;flex-shrink:0}
+.outlet-btn.wa{background:var(--wa)}
+.outlet-btn.wa:hover{background:#1db954;transform:scale(1.05)}
+.outlet-btn.maps{background:rgba(191,162,122,0.15);border-color:rgba(191,162,122,0.25)}
+.outlet-btn.maps:hover{background:rgba(191,162,122,0.25);border-color:var(--gold)}
+.outlet-btn.grab{background:rgba(0,174,92,0.12);border-color:rgba(0,174,92,0.2)}
+.outlet-btn.grab:hover{background:rgba(0,174,92,0.22)}
+.outlet-btn.grab.disabled{background:rgba(80,80,80,0.15);border-color:rgba(80,80,80,0.2);cursor:not-allowed;opacity:0.45}
+.outlet-btn svg{width:15px;height:15px}
+.outlet-address{font-size:0.72rem;color:rgba(230,211,179,0.5);line-height:1.5;margin-bottom:0.35rem;font-weight:300}
+.outlet-hours{font-size:0.62rem;letter-spacing:1.5px;color:var(--brown);text-transform:uppercase;display:flex;align-items:center;gap:0.35rem}
+.outlet-hours svg{width:11px;height:11px;opacity:0.6}
+
+/* ══ FOOTER ══ */
+footer{background:var(--black);padding:3rem 1.5rem 2.5rem;border-top:1px solid var(--espresso)}
+.footer-logo{height:36px;width:auto;object-fit:contain;margin-bottom:0.25rem;filter:brightness(0.85)}
+.footer-logo-fallback{display:none;font-family:var(--display);font-size:2rem;color:var(--gold);letter-spacing:4px;margin-bottom:0.25rem}
+.footer-tagline{font-family:var(--serif);font-style:italic;font-size:0.85rem;color:var(--brown);margin-bottom:2rem}
+.footer-links{display:flex;flex-wrap:wrap;gap:0.4rem 1.25rem;margin-bottom:2.5rem}
+.footer-link{font-size:0.65rem;letter-spacing:2px;color:var(--brown);text-transform:uppercase;cursor:pointer;transition:color 0.2s;font-weight:500}
+.footer-link:hover{color:var(--gold)}
+.footer-disclaimer{font-size:0.58rem;color:rgba(166,124,82,0.35);line-height:1.7;padding-top:1.5rem;border-top:1px solid var(--espresso)}
+
+/* ══ WA FLOAT ══ */
+#wa-float{position:fixed;bottom:1.25rem;right:1.25rem;width:52px;height:52px;background:var(--wa);border-radius:50%;display:none;align-items:center;justify-content:center;cursor:pointer;z-index:50;box-shadow:0 0 0 0 rgba(37,211,102,0.4);animation:waPulse 2.5s infinite}
+@keyframes waPulse{0%{box-shadow:0 0 0 0 rgba(37,211,102,0.4)}70%{box-shadow:0 0 0 12px rgba(37,211,102,0)}100%{box-shadow:0 0 0 0 rgba(37,211,102,0)}}
+#wa-float svg{width:24px;height:24px;fill:white}
+
+/* ══ SVG ICONS (reusable) ══ */
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+</style>
+</head>
+<body>
+
+<!-- ═══ AGE GATE ═══ -->
+<div id="age-gate">
+  <div class="ag-bg"></div>
+  <div class="ag-overlay"></div>
+  <div class="ag-particles" id="agParticles"></div>
+  <div class="ag-card">
+    <div class="ag-logo-wrap">
+      <img class="ag-logo" src="https://res.cloudinary.com/dpjw4tqqn/image/upload/v1777522252/21_zmbhhv.png" alt="C Store" onerror="this.style.display='none';document.getElementById('agLogoFallback').style.display='block'">
+      <div class="ag-logo-fallback" id="agLogoFallback">C STORE</div>
+    </div>
+    <div class="ag-divider"><div class="ag-divider-line"></div><div class="ag-divider-dot"></div><div class="ag-divider-line"></div></div>
+    <div class="ag-eyebrow">Verifikasi Usia</div>
+    <div class="ag-title">Masukkan tanggal<br>lahirmu, <em>please.</em></div>
+    <div class="ag-sub">Produk ini hanya untuk orang dewasa usia 21 tahun ke atas</div>
+    <div class="ag-input-label">Tanggal Lahir</div>
+    <div class="ag-inputs">
+      <div class="ag-iw"><input class="ag-input" id="agDD" type="number" inputmode="numeric" placeholder="DD" min="1" max="31"><span class="ag-hint">Tgl</span></div>
+      <span class="ag-sep">/</span>
+      <div class="ag-iw"><input class="ag-input" id="agMM" type="number" inputmode="numeric" placeholder="MM" min="1" max="12"><span class="ag-hint">Bln</span></div>
+      <span class="ag-sep">/</span>
+      <div class="ag-iw year"><input class="ag-input" id="agYY" type="number" inputmode="numeric" placeholder="YYYY" min="1900"><span class="ag-hint">Tahun</span></div>
+    </div>
+    <div class="ag-err" id="agErr"></div>
+    <button class="ag-btn-yes" onclick="agEnter()">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 12l2 2 4-4M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0z"/></svg>
+      YA, SAYA 21 TAHUN KE ATAS
+    </button>
+    <button class="ag-btn-no" onclick="window.location.href='https://google.com'">Tidak, saya belum 21 tahun</button>
+    <div class="ag-disclaimer">Dengan masuk, kamu mengkonfirmasi bahwa kamu berusia minimal 21 tahun dan memahami risiko produk yang mengandung nikotin. Produk ini bersifat adiktif dan tidak dijual kepada anak di bawah umur.</div>
+  </div>
+</div>
+
+<!-- ═══ MAIN ═══ -->
+<div id="main">
+
+<!-- NAV -->
+<nav>
+  <img class="nav-logo-img" src="https://res.cloudinary.com/dpjw4tqqn/image/upload/v1777522252/21_zmbhhv.png" alt="C Store" onclick="window.scrollTo({top:0,behavior:'smooth'})" onerror="this.style.display='none';document.getElementById('navLogoFallback').style.display='block'">
+  <div class="nav-logo-fallback" id="navLogoFallback" onclick="window.scrollTo({top:0,behavior:'smooth'})">C STORE</div>
+  <div class="nav-ig" onclick="window.open('https://www.instagram.com/cstorevape','_blank')" aria-label="Instagram">
+    <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-progress" id="heroProgress"></div>
+  <div class="hero-counter" id="heroCounter">1 / 12</div>
+  <div class="hero-slide-bg">
+    <div class="hero-track" id="heroTrack"></div>
+  </div>
+  <div class="hero-content">
+    <div class="hero-eyebrow"><span class="e-line"></span>Premium Vape Store · 8 Kota · 37 Outlet</div>
+    <h1 class="hero-title">Your <em>Vape Experience,</em><br>Closer Than You Think</h1>
+    <p class="hero-desc">Pilih outlet terdekat, order langsung via GrabMart atau WhatsApp. Premium pods, devices &amp; accessories — siap dikirim ke tanganmu.</p>
+    <div class="hero-ctas">
+      <button class="cta-grab" onclick="goTo('outlets')">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+        ORDER VIA GRABMART
+      </button>
+      <button class="cta-wa" onclick="goTo('outlets')">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        ORDER VIA WHATSAPP
+      </button>
+    </div>
+  </div>
+  <div class="hero-bottom">
+    <div class="hero-stats-row">
+      <div class="hero-stats">
+        <div class="hstat"><div class="hstat-num" onclick="goTo('outlets')">37</div><div class="hstat-label">Total Outlet</div></div>
+        <div class="hstat"><div class="hstat-num">8</div><div class="hstat-label">Kota</div></div>
+        <div class="hstat"><div class="hstat-num" onclick="goTo('outlets')">35</div><div class="hstat-label">di GrabMart</div></div>
+      </div>
+      <div class="hero-dots">
+        <div class="hero-dots-row" id="heroDots"></div>
+        <div class="hero-dots-label">Geser banner</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROMO -->
+<section id="promo" class="section">
+  <div class="reveal">
+    <div class="s-eyebrow"><span class="e-line"></span>Hot · Deals · Hemat</div>
+    <h2 class="s-title">Promo &amp; <em>Penawaran</em></h2>
+    <div class="s-divider"></div>
+    <div class="promo-tabs" id="promoTabs" role="tablist"></div>
+    <div id="promoPanels"></div>
+  </div>
+</section>
+
+<!-- OUTLETS -->
+<section id="outlets" class="section section-dark">
+  <div class="reveal">
+    <div class="s-eyebrow"><span class="e-line"></span>Find · Order · Fast</div>
+    <h2 class="s-title">Outlet <em>Kami</em></h2>
+    <div class="s-divider"></div>
+    <div class="city-tabs" id="cityTabs" role="tablist"></div>
+    <div id="cityPanels"></div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <img class="footer-logo" src="https://res.cloudinary.com/dpjw4tqqn/image/upload/v1777522252/21_zmbhhv.png" alt="C Store" onerror="this.style.display='none';document.getElementById('footerLogoFallback').style.display='block'">
+  <div class="footer-logo-fallback" id="footerLogoFallback">C STORE</div>
+  <div class="footer-tagline">Your vape experience, closer than you think.</div>
+  <div class="footer-links">
+    <span class="footer-link" onclick="goTo('promo')">Promo</span>
+    <span class="footer-link" onclick="goTo('outlets')">Outlet</span>
+    <span class="footer-link" onclick="window.open('https://www.instagram.com/cstorevape','_blank')">Instagram</span>
+  </div>
+  <p class="footer-disclaimer">© 2025 C Store. Khusus untuk orang dewasa usia 21 tahun ke atas. Produk ini mengandung nikotin yang bersifat adiktif dan menyebabkan ketergantungan. Dilarang keras menjual kepada anak-anak dan remaja di bawah umur. Nikotin berbahaya bagi ibu hamil.</p>
+</footer>
+
+<!-- WA FLOAT -->
+<div id="wa-float" onclick="goTo('outlets')" aria-label="Order via WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</div>
+
+</div><!-- end #main -->
+
+<script>
+/* ═══════════════════════════════════════
+   FALLBACK DATA (embedded in HTML)
+   Used if JSON files fail to load
+═══════════════════════════════════════ */
+const FALLBACK_OUTLETS = {"updated":"April 2026","cities":[{"city":"Jakarta","outlets":[{"name":"C Store Muwardi","address":"Jl. Muwardi No.42, RT.10/RW.4, Grogol, Kec. Grogol petamburan, Kota Jakarta Barat, DKI Jakarta 11450","hours":"09:00 - 21:00","wa":"https://wa.me/6287722724816","grab":"https://r.grab.com/g/2-2-6-C7UYMF5FWFM3GJ","maps":"https://maps.app.goo.gl/ER1bq46dGGZTdEqZ6"},{"name":"C Store Benhil","address":"Jl. Bendungan Hilir No.98, RT.12/RW.4, Bend. Hilir, Kec. Tanah Abang, Kota Jakarta Pusat, DKI Jakarta 10210","hours":"09:00 - 21:00","wa":"","grab":"","maps":"https://maps.app.goo.gl/rHZzRTikB5SHfBXDA"}]},{"city":"Tangerang","outlets":[{"name":"C Store Pustek","address":"Jl. Raya Puspitek No.48, Buaran, Kec. Serpong, Kota Tangerang Selatan, Banten 15310","hours":"09:00 - 21:00","wa":"https://wa.me/6281913580778","grab":"https://r.grab.com/g/2-2-6-C7T1JB4BVPNXKE","maps":"https://maps.app.goo.gl/PGc77Hcwc1tfPXgX8"},{"name":"C Store Fiorenza Cikupa","address":"Ruko Fiorenza, JL. Raya H. Cinde Lakoni No.17/52 Blok P, Ciakar, Kec. Cikupa, Kab. Tangerang, Banten 15710","hours":"09:00 - 21:00","wa":"https://wa.me/6281944210513","grab":"https://r.grab.com/g/2-2-6-C7T1JB32LFKGGA","maps":"https://maps.app.goo.gl/4k6Ke8hLkbxEJaKJA"},{"name":"C Store Benda Pamulang","address":"Ruko Pamulang Permai No.F1/27, Benda Baru, Kec. Pamulang, Kota Tangerang Selatan, Banten 15433","hours":"09:00 - 21:00","wa":"https://wa.me/6281944215238","grab":"https://r.grab.com/g/2-2-6-C7TAR8J1BCCZDA","maps":"https://maps.app.goo.gl/v7TbA6F1Xda3SAEG6"},{"name":"C Store Milenial PIK 2","address":"Rukan Millenial Blok B-07, PIK 2, Tanjung Burung, Teluknaga, Tangerang, Banten 15326","hours":"09:00 - 21:00","wa":"https://wa.me/6281944219566","grab":"https://r.grab.com/g/2-2-6-C7UCNFCGJTCZE2","maps":"https://maps.app.goo.gl/M7sPAxscgdmXaKkA8"},{"name":"C Store Taman Asri","address":"Ruko Taman Asri, Jl. Taman Asri Utama Blok I No.2, Gaga, Kec. Larangan, Kota Tangerang, Banten 15154","hours":"09:00 - 21:00","wa":"https://wa.me/6287722724806","grab":"https://r.grab.com/g/2-2-6-C7T1WBKUHFMGJ2","maps":"https://maps.app.goo.gl/h4W5qt1xxaoff2di6"},{"name":"C Store Taman Royal","address":"Ruko Taman Royal, Permata Niaga 3 No.3, Tanah Tinggi, Kec. Tangerang, Kota Tangerang, Banten 15119","hours":"09:00 - 21:00","wa":"https://wa.me/6287722724805","grab":"https://r.grab.com/g/2-2-6-C7T2DGCUNVAKGX","maps":"https://maps.app.goo.gl/G55mvXT7ue28tM8B8"},{"name":"C Store Palem Semi","address":"Komplek Ruko Barcelona No.75, Jl. Palem Raja Karawaci, Kec. Cibodas, Kota Tangerang, Banten 15139","hours":"09:00 - 21:00","wa":"https://wa.me/628175200134","grab":"https://r.grab.com/g/2-2-6-C7TKG8BZEBDDTJ","maps":"https://maps.app.goo.gl/LcEGd6ejFeMD3n7U8"}]},{"city":"Bogor","outlets":[{"name":"C Store Canadian Cibubur","address":"Kota Wisata Ruko Canadian Broadway, Jl. Raya Kota Wisata Blok CBE No.15, Limus Nunggal, Kec. Cileungsi, Kab. Bogor, Jawa Barat 16820","hours":"09:00 - 21:00","wa":"https://wa.me/6281944220051","grab":"https://r.grab.com/g/2-2-6-C7T2AXADCGLFRN","maps":"https://maps.app.goo.gl/nUubmw5e7fXGTgfNA"},{"name":"C Store Permata Cibubur","address":"Ruko Permata Cibubur, Jl. Raya Permata Cibubur No.6 Blok F.05, Kec. Cileungsi, Kab. Bogor, Jawa Barat 16820","hours":"09:00 - 21:00","wa":"https://wa.me/6281944214740","grab":"https://r.grab.com/g/2-2-6-C7T1E7CGEKL3GN","maps":"https://maps.app.goo.gl/JNEUxD692oGLcMiM7"}]},{"city":"Bekasi","outlets":[{"name":"C Store CBD Cibubur","address":"Ruko CBD Citra Grand Blok ER 2 No.6, Jati Rangga, Kec. Jatisampurna, Kota Bekasi, Jawa Barat 17434","hours":"09:00 - 21:00","wa":"https://wa.me/628175200141","grab":"https://r.grab.com/g/2-2-6-C7T1JP5YEBUXA6","maps":"https://maps.app.goo.gl/MKMTX6h5EwD4VYh19"}]},{"city":"Karawang","outlets":[{"name":"C Store Taruma","address":"Ruko Grand Taruma, Jl. Darmawangsa III No.10 D/9-D/10, Sukamakmur, Teluk Jambe Timur, Karawang, Jawa Barat 41361","hours":"09:00 - 21:00","wa":"https://wa.me/6287722724809","grab":"https://r.grab.com/g/2-2-6-C7UBLCNYTJA2RJ","maps":"https://maps.app.goo.gl/aScJsXL1SAERoPKk9"}]},{"city":"Bandung","outlets":[{"name":"C Store Astana","address":"Jl. Astana Anyar No.68, Cibadak, Kec. Astanaanyar, Kota Bandung, Jawa Barat 40241","hours":"09:00 - 21:00","wa":"https://wa.me/6287722724795","grab":"https://r.grab.com/g/2-2-6-C7T1FGCHWBBKLA","maps":"https://maps.app.goo.gl/FFBrJtvAnQ4K6vKq6"},{"name":"C Store Duyut","address":"Jl. Cibaduyut No.70, Cibaduyut, Kec. Bojongloa Kidul, Kota Bandung, Jawa Barat 40236","hours":"09:00 - 21:00","wa":"https://wa.me/6287722724798","grab":"https://r.grab.com/g/2-2-6-C7T1GZCKL6U2NE","maps":"https://maps.app.goo.gl/KhcfbUjg9PyMHzzX6"},{"name":"C Store IBC","address":"Plaza IBCC, Jl. A. Yani Blok D3 No.11, Kacapiring, Kec. Batununggal, Kota Bandung, Jawa Barat 40114","hours":"09:00 - 21:00","wa":"https://wa.me/6285966715453","grab":"https://r.grab.com/g/2-2-6-C7T1GZCKLYNFET","maps":"https://maps.app.goo.gl/agPXDAcScuzK2GrW9"},{"name":"C Store Jurang Pasteur","address":"Jl. Jurang No.51B, Pasteur, Kec. Sukajadi, Kota Bandung, Jawa Barat 40161","hours":"09:00 - 21:00","wa":"https://wa.me/6285966715459","grab":"https://r.grab.com/g/2-2-6-C7T1FGCGGN53EE","maps":"https://maps.app.goo.gl/j3es9mHbhJxcZP636"},{"name":"C Store Veteran","address":"Jl. Veteran No.40, Kb. Pisang, Kec. Sumur Bandung, Kota Bandung, Jawa Barat 40112","hours":"09:00 - 21:00","wa":"https://wa.me/6287722724796","grab":"https://r.grab.com/g/2-2-6-C7T1EX4ALT5GNE","maps":"https://maps.app.goo.gl/aKefZX2Sm6Zg5HcJ8"},{"name":"C Store Pelajar Pejuang 45","address":"Jl. Pelajar Pejuang 45 No.102, Turangga, Kec. Lengkong, Kota Bandung, Jawa Barat 40263","hours":"09:00 - 21:00","wa":"https://wa.me/6281944219563","grab":"https://r.grab.com/g/2-2-6-C7T1GPC3DCMBEX","maps":"https://maps.app.goo.gl/71STHS7kXfCkR2Fn9"},{"name":"C Store Pluto","address":"Jl. Pluto Raya No.35 E, Margasari, Kec. Buahbatu, Kota Bandung, Jawa Barat 40286","hours":"09:00 - 21:00","wa":"https://wa.me/6281944219564","grab":"https://r.grab.com/g/2-2-6-C7T1GPCZTFNBJN","maps":"https://maps.app.goo.gl/rchmnSvAKfnzHeG49"},{"name":"C Store Cijagra","address":"Jl. Cijagra 1 No.63, Cijagra, Kec. Lengkong, Kota Bandung, Jawa Barat 40265","hours":"09:00 - 21:00","wa":"https://wa.me/6287722724813","grab":"https://r.grab.com/g/2-2-6-C7T1GZCKL6T2RT","maps":"https://maps.app.goo.gl/ZFxnAVf65zxFj2Vh9"},{"name":"C Store Harmony","address":"Ruko Harmony Park No.4, Jl. Ciwanstra No.86, Margahayu Endah, Kec. Rancasari, Kota Bandung, Jawa Barat 40292","hours":"09:00 - 21:00","wa":"https://wa.me/6287722724824","grab":"https://r.grab.com/g/2-2-6-C7T1HFDTVJD1JX","maps":"https://maps.app.goo.gl/mS2iE8GtMrvGyRe28"},{"name":"C Store Kopo Permai 3","address":"Ruko Kopo Permai, Jl. Kopo Permai III No.F8/7, Cangkuang Kulon, Kec. Dayeuhkolot, Kab. Bandung, Jawa Barat 40227","hours":"09:00 - 21:00","wa":"https://wa.me/6287722724827","grab":"https://r.grab.com/g/2-2-6-C7T1JX6XVUC3VN","maps":"https://maps.app.goo.gl/Sc3JcjJHtwN5JoBw9"},{"name":"C Store TKI 3","address":"Jl. Taman Kopo Indah 3 No.F-12A, Mekar Rahayu, Kec. Margaasih, Kab. Bandung, Jawa Barat 40218","hours":"09:00 - 21:00","wa":"https://wa.me/6281949873164","grab":"https://r.grab.com/g/2-2-6-C7T1GPC2T7XVR2","maps":"https://maps.app.goo.gl/HTc1hu3s2adAU7mX7"},{"name":"C Store Istana Sudirman","address":"Ruko Istana Sudirman Residen, Jl. Raya Cijerah No.11A, Cibuntu, Kec. Bandung Kulon, Kota Bandung 40212","hours":"09:00 - 21:00","wa":"https://wa.me/6287700293365","grab":"https://r.grab.com/g/2-2-6-C7T1G6DHCNCFG2","maps":"https://maps.app.goo.gl/WiLPY4Eq6GpoW6Vk8"},{"name":"C Store Cijambe","address":"Ruko Komplek Pasir Jati, Jl. Cijambe No.49A, Pasir Endah, Kec. Ujung Berung, Kota Bandung, Jawa Barat 40619","hours":"09:00 - 21:00","wa":"https://wa.me/6287700293366","grab":"https://r.grab.com/g/2-2-6-C7T1JX6XVJAYEA","maps":"https://maps.app.goo.gl/3weQkiLxf5S6YB9HA"}]},{"city":"Semarang","outlets":[{"name":"C Store Anggrek","address":"Jl. Anggrek Raya No.4, Pekunden, Kec. Semarang Tengah, Kota Semarang, Jawa Tengah 50123","hours":"09:00 - 21:00","wa":"https://wa.me/6287722724834","grab":"https://r.grab.com/g/2-2-6-C7T1WBKURP6TTJ","maps":"https://maps.app.goo.gl/v3AtV4K9rc1AFKg88"},{"name":"C Store Bonjol","address":"Jl. Imam Bonjol No.180H, Pendrikan Kidul, Kec. Semarang Tengah, Kota Semarang, Jawa Tengah 50131","hours":"09:00 - 21:00","wa":"https://wa.me/6287722724838","grab":"https://r.grab.com/g/2-2-6-C7T2AXAKJTWWTT","maps":"https://maps.app.goo.gl/kbVVto9JGmv8CV777"},{"name":"C Store Kedungmundu","address":"Jl. Fatmawati No.3, Kedungmundu, Kec. Tembalang, Kota Semarang, Jawa Tengah 50246","hours":"09:00 - 21:00","wa":"https://wa.me/6287722724833","grab":"https://r.grab.com/g/2-2-6-C7THRZJKVE4HC2","maps":"https://maps.app.goo.gl/HeZmXdQbsgraGjSH6"},{"name":"C Store Kelud","address":"Jl. Kelud Raya 15B, Petompon, Kec. Gajahmungkur, Kota Semarang, Jawa Tengah 50237","hours":"09:00 - 21:00","wa":"https://wa.me/6287854020222","grab":"https://r.grab.com/g/2-2-6-C7T2AGNXR7E3TX","maps":"https://maps.app.goo.gl/TbR96fWmoXigr6H48"},{"name":"C Store Lamper","address":"Jl. Lamper Tengah No.168 A-B, Pandean Lamper, Kec. Gayamsari, Kota Semarang, Jawa Tengah 50248","hours":"09:00 - 21:00","wa":"https://wa.me/6287722724832","grab":"https://r.grab.com/g/2-2-6-C7T1JX6XVBU1HA","maps":"https://maps.app.goo.gl/UwHvpWuwEfaj1pub9"},{"name":"C Store Plamongan","address":"Jl. Brigjen Sudiarto No.158, Plamongan Sari, Kec. Pedurungan, Kota Semarang, Jawa Tengah 50192","hours":"09:00 - 21:00","wa":"https://wa.me/6287722724837","grab":"https://r.grab.com/g/2-2-6-C7T1WBLDCBWJRN","maps":"https://maps.app.goo.gl/hPGAxWw9BxX4deNu6"},{"name":"C Store Tlogosari","address":"Jl. Soekarno Hatta No.101, Tlogosari Kulon, Kec. Pedurungan, Kota Semarang, Jawa Tengah 50196","hours":"09:00 - 21:00","wa":"https://wa.me/6287722724829","grab":"https://r.grab.com/g/2-2-6-C7T1JP5XE3LBRX","maps":"https://maps.app.goo.gl/tCGDYnHufw93yS3M8"}]},{"city":"Surabaya","outlets":[{"name":"C Store Northwest","address":"Ruko Northwest Citraland, Northwest Boulevard NV2 No.53, Babat Jerawat, Kec. Pakal, Kota Surabaya, Jawa Timur 60196","hours":"09:00 - 21:00","wa":"https://wa.me/628175200139","grab":"https://r.grab.com/g/2-2-6-C7T2CTAVJ6AHVT","maps":"https://maps.app.goo.gl/fg6K2erhzMhvSpVBA"},{"name":"C Store Sukolilo","address":"Eastern Park AB, Jl. Raya Sukolilo Mulia No.A15, Keputih, Kec. Sukolilo, Kota Surabaya, Jawa Timur 60111","hours":"09:00 - 21:00","wa":"https://wa.me/628175200137","grab":"https://r.grab.com/g/2-2-6-C7T1WBKGLAXUNJ","maps":"https://maps.app.goo.gl/afuqFY3L2G1ow8JRA"},{"name":"C Store Bukitmas","address":"Ruko Wisata Bukitmas 2, Jl. Wisata Bukit Mas Blok RH No.2, Lidah Wetan, Kec. Lakarsantri, Kota Surabaya, Jawa Timur 60213","hours":"09:00 - 21:00","wa":"https://wa.me/628175200140","grab":"https://r.grab.com/g/2-2-6-C7UCLYC1HEKTNN","maps":"https://maps.app.goo.gl/8kavY5TdMcMnb3888"},{"name":"C Store Ketintang","address":"Ruko OP, Jl. Ketintang Baru No.50E, Kel. Ketintang, Kec. Gayungan, Kota Surabaya, Jawa Timur 60231","hours":"09:00 - 21:00","wa":"https://wa.me/628175200136","grab":"https://r.grab.com/g/2-2-6-C7T1WBKERGKJRE","maps":"https://maps.app.goo.gl/Z7egzeXwwyz8w3jXA"}]}]};
+
+const FALLBACK_PROMOS = {"month":"Mei 2026","banners":["https://res.cloudinary.com/dpjw4tqqn/image/upload/v1777525496/oke_untuk_ini_saya_mau_202604301202_cjwpm9.jpg","https://res.cloudinary.com/dpjw4tqqn/image/upload/v1777531837/buat_ukurannya_jadi_16_9_jangan_202604301333_gcdliw.jpg","https://res.cloudinary.com/dpjw4tqqn/image/upload/v1777531840/buat_ukurannya_jadi_16_9_jangan_202604301328_uq8amv.jpg","https://res.cloudinary.com/dpjw4tqqn/image/upload/v1777531840/buat_ukurannya_jadi_16_9_jangan_202604301338_xlywvu.jpg","https://res.cloudinary.com/dpjw4tqqn/image/upload/v1777531845/buat_ukurannya_jadi_16_9_jangan_202604301346_curf99.jpg","https://res.cloudinary.com/dpjw4tqqn/image/upload/v1777531848/buat_ukurannya_jadi_16_9_jangan_202604301340_gjhyqn.jpg","https://res.cloudinary.com/dpjw4tqqn/image/upload/v1777531848/buat_ukurannya_jadi_16_9_jangan_202604301342_jdo2jc.jpg","https://res.cloudinary.com/dpjw4tqqn/image/upload/v1777531861/buat_ukurannya_jadi_16_9_jangan_202604301337_esscnt.jpg","https://res.cloudinary.com/dpjw4tqqn/image/upload/v1777531861/buat_ukurannya_jadi_16_9_jangan_202604301347_xnmvcr.jpg","https://res.cloudinary.com/dpjw4tqqn/image/upload/v1777531861/buat_ukurannya_jadi_16_9_jangan_202604301336_s6eeif.jpg","https://res.cloudinary.com/dpjw4tqqn/image/upload/v1777531867/buat_ukurannya_jadi_16_9_jangan_202604301349_ydxxm0.jpg","https://res.cloudinary.com/dpjw4tqqn/image/upload/v1777531869/buat_ukurannya_jadi_16_9_jangan_202604301331_wcp7uv.jpg"],"tabs":[{"id":"mayday","name":"MAYDAY","products":[{"name":"XROS 5 Mini Bundle Kit","price_original":190000,"price_promo":170000,"category":"POD"},{"name":"Oxva Xlim Pro","price_original":280000,"price_promo":240000,"category":"POD"},{"name":"Salt Nic Premium 30ml","price_original":105000,"price_promo":89000,"category":"LIQUID"},{"name":"Coil Pack 5pcs","price_original":65000,"price_promo":45000,"category":"COIL"},{"name":"Starter Kit Bundle","price_original":500000,"price_promo":450000,"category":"KIT"}]},{"id":"liquidday","name":"LIQUID DAY","products":[{"name":"Kamikaze Iced 60ml","price_original":120000,"price_promo":95000,"category":"LIQUID"},{"name":"Doozy Nicsalt 30ml","price_original":95000,"price_promo":79000,"category":"LIQUID"},{"name":"FreeBase Premium 60ml","price_original":110000,"price_promo":89000,"category":"LIQUID"},{"name":"Salt Nic Bundle 2x30ml","price_original":190000,"price_promo":149000,"category":"LIQUID"},{"name":"Liquid Disposable Pack","price_original":85000,"price_promo":69000,"category":"LIQUID"}]},{"id":"oneprice","name":"ONE PRICE","products":[{"name":"All Liquid 30ml","price_original":95000,"price_promo":79000,"category":"LIQUID"},{"name":"All Coil Standard","price_original":50000,"price_promo":39000,"category":"COIL"},{"name":"Pod Cartridge 2pcs","price_original":75000,"price_promo":59000,"category":"POD"},{"name":"All Disposable","price_original":85000,"price_promo":69000,"category":"DISPOSABLE"},{"name":"Cotton Pack Premium","price_original":45000,"price_promo":35000,"category":"AKSESORIS"}]},{"id":"oxvabooster","name":"OXVA BOOSTER","products":[{"name":"OXVA Xlim V3","price_original":320000,"price_promo":275000,"category":"POD"},{"name":"OXVA Xlim Pro Bundle","price_original":380000,"price_promo":320000,"category":"POD"},{"name":"OXVA Coil Pack","price_original":70000,"price_promo":55000,"category":"COIL"},{"name":"OXVA Pod Cartridge","price_original":80000,"price_promo":65000,"category":"AKSESORIS"}]},{"id":"djoyfestival","name":"DJOY FESTIVAL","products":[{"name":"Djoy Beam Bundle","price_original":150000,"price_promo":119000,"category":"DISPOSABLE"},{"name":"Djoy 79 Series","price_original":85000,"price_promo":69000,"category":"DISPOSABLE"},{"name":"Djoy Fest Edition","price_original":95000,"price_promo":79000,"category":"DISPOSABLE"}]}]};
+
+/* ═══════════════════════════════════════
+   SVG ICONS
+═══════════════════════════════════════ */
+const SVG = {
+  wa: `<svg viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>`,
+  maps: `<svg viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>`,
+  grab: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>`,
+  clock: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>`,
+};
+
+/* ═══════════════════════════════════════
+   AGE GATE
+═══════════════════════════════════════ */
+(function buildAgParticles(){
+  const c=document.getElementById('agParticles');
+  for(let i=0;i<10;i++){
+    const p=document.createElement('span');
+    p.className='ag-p';
+    const sz=Math.random()*14+6;
+    p.style.cssText=`width:${sz}px;height:${sz}px;left:${Math.random()*100}%;animation-duration:${Math.random()*8+5}s;animation-delay:${Math.random()*5}s`;
+    c.appendChild(p);
+  }
+})();
+
+const agDD=document.getElementById('agDD'),agMM=document.getElementById('agMM'),agYY=document.getElementById('agYY'),agErr=document.getElementById('agErr');
+agDD.addEventListener('input',()=>{agDD.value=agDD.value.replace(/\D/g,'').slice(0,2);if(agDD.value.length===2)agMM.focus();agErr.textContent=''});
+agMM.addEventListener('input',()=>{agMM.value=agMM.value.replace(/\D/g,'').slice(0,2);if(agMM.value.length===2)agYY.focus();agErr.textContent=''});
+agYY.addEventListener('input',()=>{agYY.value=agYY.value.replace(/\D/g,'').slice(0,4);agErr.textContent=''});
+agDD.addEventListener('blur',()=>{if(agDD.value){const v=Math.max(1,Math.min(31,parseInt(agDD.value)));agDD.value=String(v).padStart(2,'0')}});
+agMM.addEventListener('blur',()=>{if(agMM.value){const v=Math.max(1,Math.min(12,parseInt(agMM.value)));agMM.value=String(v).padStart(2,'0')}});
+agYY.addEventListener('keydown',e=>{if(e.key==='Enter')agEnter()});
+
+function agEnter(){
+  const d=parseInt(agDD.value),m=parseInt(agMM.value),y=parseInt(agYY.value);
+  if(!d||!m||!y){agErr.textContent='Lengkapi tanggal lahirmu dulu ya.';return}
+  if(d<1||d>31){agErr.textContent='Tanggal tidak valid.';[agDD,agMM,agYY].forEach(el=>el.classList.add('error'));setTimeout(()=>[agDD,agMM,agYY].forEach(el=>el.classList.remove('error')),500);return}
+  if(m<1||m>12){agErr.textContent='Bulan tidak valid.';[agDD,agMM,agYY].forEach(el=>el.classList.add('error'));setTimeout(()=>[agDD,agMM,agYY].forEach(el=>el.classList.remove('error')),500);return}
+  if(y<1900||y>new Date().getFullYear()){agErr.textContent='Tahun tidak valid.';[agDD,agMM,agYY].forEach(el=>el.classList.add('error'));setTimeout(()=>[agDD,agMM,agYY].forEach(el=>el.classList.remove('error')),500);return}
+  const today=new Date(),dob=new Date(y,m-1,d);
+  let age=today.getFullYear()-dob.getFullYear();
+  if(today.getMonth()-dob.getMonth()<0||(today.getMonth()-dob.getMonth()===0&&today.getDate()<dob.getDate()))age--;
+  if(age<21){
+    agErr.textContent='Kamu belum memenuhi batas usia minimum 21 tahun.';
+    [agDD,agMM,agYY].forEach(el=>el.classList.add('error'));
+    setTimeout(()=>[agDD,agMM,agYY].forEach(el=>el.classList.remove('error')),500);
+    return;
+  }
+  const gate=document.getElementById('age-gate');
+  gate.style.transition='opacity 0.6s ease';gate.style.opacity='0';
+  setTimeout(()=>{
+    gate.style.display='none';
+    document.getElementById('main').style.display='block';
+    document.getElementById('wa-float').style.display='flex';
+    initObserver();
+    loadData();
+  },600);
+}
+
+/* ═══════════════════════════════════════
+   HERO SLIDESHOW
+═══════════════════════════════════════ */
+let heroCurrent=0,heroAuto=null,heroDragging=false,heroDragStartX=0,heroDragDeltaX=0;
+const HERO_INTERVAL=5000;
+
+function buildHero(banners){
+  const track=document.getElementById('heroTrack');
+  const dotsEl=document.getElementById('heroDots');
+  const counter=document.getElementById('heroCounter');
+  const progress=document.getElementById('heroProgress');
+  const heroBg=document.querySelector('.hero-slide-bg');
+
+  track.innerHTML='';dotsEl.innerHTML='';
+  counter.textContent=`1 / ${banners.length}`;
+
+  banners.forEach((src,i)=>{
+    const slide=document.createElement('div');
+    slide.className='hero-slide'+(i===0?' active':'');
+    const img=document.createElement('img');
+    img.alt=`Promo ${i+1}`;img.loading=i<2?'eager':'lazy';img.src=src;
+    slide.appendChild(img);track.appendChild(slide);
+    const dot=document.createElement('div');
+    dot.className='hdot'+(i===0?' active':'');
+    dot.onclick=()=>heroSlideTo(i);
+    dotsEl.appendChild(dot);
+  });
+
+  function heroSlideTo(idx,fast=false){
+    heroCurrent=((idx%banners.length)+banners.length)%banners.length;
+    track.style.transition=fast?'transform 0.35s ease':'transform 0.7s cubic-bezier(0.25,0.46,0.45,0.94)';
+    track.style.transform=`translateX(-${heroCurrent*100}%)`;
+    document.querySelectorAll('.hero-slide').forEach((s,i)=>s.classList.toggle('active',i===heroCurrent));
+    document.querySelectorAll('.hdot').forEach((d,i)=>d.classList.toggle('active',i===heroCurrent));
+    counter.textContent=`${heroCurrent+1} / ${banners.length}`;
+    progress.classList.remove('run');progress.style.width='0%';
+    requestAnimationFrame(()=>requestAnimationFrame(()=>{progress.classList.add('run')}));
+  }
+  window.heroSlideTo=heroSlideTo;
+
+  function startHeroAuto(){clearInterval(heroAuto);heroAuto=setInterval(()=>heroSlideTo(heroCurrent+1),HERO_INTERVAL)}
+  function stopHeroAuto(){clearInterval(heroAuto)}
+
+  heroBg.addEventListener('touchstart',e=>{heroDragging=true;heroDragStartX=e.touches[0].clientX;heroDragDeltaX=0;track.style.transition='none';stopHeroAuto()},{passive:true});
+  heroBg.addEventListener('touchmove',e=>{if(!heroDragging)return;heroDragDeltaX=e.touches[0].clientX-heroDragStartX;const off=-(heroCurrent*100)+(heroDragDeltaX/heroBg.offsetWidth)*100;track.style.transform=`translateX(${off}%)`},{passive:true});
+  heroBg.addEventListener('touchend',()=>{if(!heroDragging)return;heroDragging=false;const t=heroBg.offsetWidth*0.18;if(heroDragDeltaX<-t)heroSlideTo(heroCurrent+1,true);else if(heroDragDeltaX>t)heroSlideTo(heroCurrent-1,true);else heroSlideTo(heroCurrent,true);startHeroAuto()});
+  heroBg.addEventListener('mousedown',e=>{e.preventDefault();heroDragging=true;heroDragStartX=e.clientX;heroDragDeltaX=0;track.style.transition='none';stopHeroAuto()});
+  window.addEventListener('mousemove',e=>{if(!heroDragging)return;heroDragDeltaX=e.clientX-heroDragStartX;const off=-(heroCurrent*100)+(heroDragDeltaX/heroBg.offsetWidth)*100;track.style.transform=`translateX(${off}%)`});
+  window.addEventListener('mouseup',()=>{if(!heroDragging)return;heroDragging=false;const t=heroBg.offsetWidth*0.18;if(heroDragDeltaX<-t)heroSlideTo(heroCurrent+1,true);else if(heroDragDeltaX>t)heroSlideTo(heroCurrent-1,true);else heroSlideTo(heroCurrent,true);startHeroAuto()});
+  document.addEventListener('visibilitychange',()=>document.hidden?stopHeroAuto():startHeroAuto());
+
+  heroSlideTo(0);startHeroAuto();
+}
+
+/* ═══════════════════════════════════════
+   PROMO SECTION
+═══════════════════════════════════════ */
+function buildPromos(data){
+  const tabsEl=document.getElementById('promoTabs');
+  const panelsEl=document.getElementById('promoPanels');
+  tabsEl.innerHTML='';panelsEl.innerHTML='';
+
+  data.tabs.forEach((tab,i)=>{
+    const btn=document.createElement('button');
+    btn.className='ptab'+(i===0?' active':'');
+    btn.textContent=tab.name;
+    btn.onclick=()=>{
+      document.querySelectorAll('.ptab').forEach(t=>t.classList.remove('active'));
+      document.querySelectorAll('.promo-panel').forEach(p=>p.classList.remove('active'));
+      btn.classList.add('active');
+      document.getElementById('pp-'+tab.id).classList.add('active');
+    };
+    tabsEl.appendChild(btn);
+
+    const panel=document.createElement('div');
+    panel.className='promo-panel'+(i===0?' active':'');
+    panel.id='pp-'+tab.id;
+
+    if(!tab.products||tab.products.length===0){
+      panel.innerHTML='<div class="promo-empty">Promo segera hadir<br>Pantau terus!</div>';
+    } else {
+      tab.products.slice(0,8).forEach(p=>{
+        const disc=Math.round((1-p.price_promo/p.price_original)*100);
+        const card=document.createElement('div');
+        card.className='promo-card';
+        card.innerHTML=`<div class="promo-thumb"><div class="promo-thumb-label">${p.category}</div><div class="promo-badge">-${disc}%</div></div><div class="promo-body"><div class="promo-name">${p.name}</div><div class="promo-price">Rp ${p.price_promo.toLocaleString('id-ID')}<span class="old">Rp ${p.price_original.toLocaleString('id-ID')}</span></div></div>`;
+        panel.appendChild(card);
+      });
+      const cta=document.createElement('div');
+      cta.className='promo-wa-cta';
+      cta.style.gridColumn='1/-1';
+      cta.innerHTML=`${SVG.wa}<span>Tanya lebih lanjut via WhatsApp</span>`;
+      cta.onclick=()=>goTo('outlets');
+      panel.appendChild(cta);
+    }
+    panelsEl.appendChild(panel);
+  });
+}
+
+/* ═══════════════════════════════════════
+   OUTLETS SECTION
+═══════════════════════════════════════ */
+function buildOutlets(data){
+  const tabsEl=document.getElementById('cityTabs');
+  const panelsEl=document.getElementById('cityPanels');
+  tabsEl.innerHTML='';panelsEl.innerHTML='';
+
+  data.cities.forEach((cityData,i)=>{
+    const tab=document.createElement('button');
+    tab.className='ctab'+(i===0?' active':'');
+    tab.textContent=cityData.city;
+    tab.onclick=()=>{
+      document.querySelectorAll('.ctab').forEach(t=>t.classList.remove('active'));
+      document.querySelectorAll('.city-panel').forEach(p=>p.classList.remove('active'));
+      tab.classList.add('active');
+      document.getElementById('cp-'+cityData.city).classList.add('active');
+    };
+    tabsEl.appendChild(tab);
+
+    const panel=document.createElement('div');
+    panel.className='city-panel'+(i===0?' active':'');
+    panel.id='cp-'+cityData.city;
+    panel.innerHTML=`<div class="cp-meta"><strong>${cityData.outlets.length}</strong> outlet tersedia di ${cityData.city}</div>`;
+
+    const list=document.createElement('div');
+    list.className='outlet-list';
+
+    cityData.outlets.forEach(outlet=>{
+      const card=document.createElement('div');
+      card.className='outlet-card';
+
+      const waBtn=outlet.wa?`<div class="outlet-btn wa" onclick="window.open('${outlet.wa}','_blank')" title="Chat WhatsApp">${SVG.wa}</div>`:`<div class="outlet-btn wa" style="opacity:0.3;cursor:not-allowed" title="WhatsApp tidak tersedia">${SVG.wa}</div>`;
+      const mapsBtn=outlet.maps?`<div class="outlet-btn maps" onclick="window.open('${outlet.maps}','_blank')" title="Buka Maps">${SVG.maps}</div>`:`<div class="outlet-btn maps" style="opacity:0.3;cursor:not-allowed" title="Maps tidak tersedia">${SVG.maps}</div>`;
+      const grabBtn=outlet.grab
+        ?`<div class="outlet-btn grab" onclick="window.open('${outlet.grab}','_blank')" title="Buka GrabMart" style="stroke:var(--wa-green, #25D366)">${SVG.grab}</div>`
+        :`<div class="outlet-btn grab disabled" title="GrabMart belum tersedia">${SVG.grab}</div>`;
+
+      card.innerHTML=`<div class="outlet-top"><div class="outlet-name">${outlet.name}</div><div class="outlet-actions">${waBtn}${mapsBtn}${grabBtn}</div></div><div class="outlet-address">${outlet.address}</div><div class="outlet-hours">${SVG.clock}${outlet.hours}</div>`;
+      list.appendChild(card);
+    });
+
+    panel.appendChild(list);
+    panelsEl.appendChild(panel);
+  });
+}
+
+/* ═══════════════════════════════════════
+   DATA LOADER (JSON → fallback)
+═══════════════════════════════════════ */
+async function loadData(){
+  let outlets=FALLBACK_OUTLETS, promos=FALLBACK_PROMOS;
+  try{const r=await fetch('data/outlets.json');if(r.ok)outlets=await r.json()}catch(e){console.warn('outlets.json not found, using fallback')}
+  try{const r=await fetch('data/promos.json');if(r.ok)promos=await r.json()}catch(e){console.warn('promos.json not found, using fallback')}
+  buildHero(promos.banners);
+  buildPromos(promos);
+  buildOutlets(outlets);
+}
+
+/* ═══════════════════════════════════════
+   SCROLL REVEAL
+═══════════════════════════════════════ */
+function initObserver(){
+  const obs=new IntersectionObserver(entries=>{
+    entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('in')});
+  },{threshold:0.1,rootMargin:'0px 0px -40px 0px'});
+  document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+}
+
+function goTo(id){
+  const el=document.getElementById(id);
+  if(el)el.scrollIntoView({behavior:'smooth',block:'start'});
+}
+</script>
+</body>
+</html>
